@@ -14,4 +14,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class,'home']);
+Route::get('/', [HomeController::class, 'home']);
+Route::get('/new-page', [HomeController::class, 'newPage']);
+Route::get('/add-product', [HomeController::class, 'addProduct']);
+Route::post('/add', [HomeController::class, 'add']);
+Route::get('/edit-product/{id}', [HomeController::class, 'editProduct']);
+Route::post('/save', [HomeController::class, 'save']);
+Route::get('/delete-product/{id}', [HomeController::class, 'deleteProduct']);
